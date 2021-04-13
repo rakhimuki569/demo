@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> How to div center </title>
+	<style>
+		*{ margin:0; padding: 0; box-sizing: border-box; }
+		:root{
+			--1color:#3498db;
+			--2color:#33d9b2;
+		}
+		/*.main{ width:100vw; height:100vh; background-color: var(--1color); position: relative;}*/
+      
+		/*---------------------first way-----------------------*/
+		/*.inner{ width:calc(100vw - 50vw);  height: calc(100vh - 30vh); background-color: var(--2color);
+			position: absolute; left:50%; top:50%; transform: translate(-50% , -50%);}*/
+		/*---------------------second way-----------------------*/
+		/*.main{ width:100vw; height:100vh; background-color: var(--1color);  display: flex; justify-content: center; align-items: center; }
+		.inner{ width:calc(100vw - 50vw);  height: calc(100vh - 30vh); background-color: var(--2color);			}*/
+		/*---------------------third way-----------------------*/
+		.main{ width:100vw; height:100vh; background-color: var(--1color);  display: grid; place-items:center; }
+		.inner{ width:calc(100vw - 50vw);  height: calc(100vh - 30vh); background-color: var(--2color);			}
+
+	</style>
+	
+</head>
+<body>
+	<div class="main">
+		<div class="inner"></div>
+	</div>
+</body>
+</html>
