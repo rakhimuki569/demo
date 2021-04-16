@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Creat pie chart</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&display=swap" rel="stylesheet">
+	<style>
+		*{margin:0;padding: 0;  box-sizing: border-box;}
+		:root{
+			--colorWhite:#fff;
+			--colorBlue:#3498db;
+			--awidth:20vw;
+			--bwidtth:15vw;
+			--cwidth:40vw;
+			--width:100vw;
+		}
+		html{font-size: 62.5%;}
+		.main{ width:var(--width); height: 100vh;background:#38ada9; display: flex; 
+		justify-content: center; align-items: center;  }
+		.design{ width:calc(100vw - 40vw);
+		height:calc(100vh - 30vh);  box-shadow: 0 0 20px #000; position: relative; }
+		.design h1{ padding: 2rem; color: #fff; }
+		.design p{ position:absolute; bottom: 1rem; right:1rem; text-align: right; font-size: 1.2rem; color: #fff; text-transform: uppercase; word-spacing: 1rem;}
+		.design p span:after{ content: ""; width:.7rem; height: .7rem; border-radius: 100%; background: currentColor; display: inline-block; margin:0rem 1rem; }
+		.pie{ background:radial-gradient(circle closest-side,transparent 100%,#38ada9 0),
+			conic-gradient( from 180deg,
+				#ee5253 0 ,
+				#ee5253 15%,
+				#f28e2c 0%,
+				#f28e2c 33%,
+				#f368e0 0%,
+				#f368e0 70%,
+                #f3bbe0 0%,
+                #f3bbe0 100%
+				);
+		min-height: 250px; min-width: 200px; }
+	</style>
+	
+</head>
+<body>
+	<div class="main">
+		<div class="design">
+			<h1>India top 5 states higher corona case</h1>
+			<div class="pie"></div>
+			<p>
+				madhy Pradesh 229929<span style="color:#ee5253;"></span>
+				<br>
+				UtarPradesh 456234<span style="color:#f28e2c;"></span>
+				<br>
+				Haryana 4445<span style="color:#f368e0;"></span>
+				<br>
+				Delhi 34521<span style="color:#f3bbe0;"></span>
+				<br>
+			</p>
+		</div>
+		
+	</div>
+</body>
+</html>
