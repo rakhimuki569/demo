@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Transparent Text</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&display=swap" rel="stylesheet">
+	<style>
+		*{margin:0;padding: 0;  box-sizing: border-box;}
+		:root{
+			--colorWhite:#fff;
+			--colorBlue:#3498db;
+			--colorGreen:#27ae60;
+			--colorRed:#e74c3c;
+			--awidth:20vw;
+			--bwidtth:15vw;
+			--cwidth:40vw;
+			--width:100vw;
+		}
+		html{font-size: 62.5%;}
+		.main{ width:100vw; height:100vh; background:#2c3e50; display: flex; justify-content: center; align-items: center; }
+         
+		.inner{ width:60vw; height: 80vh;  display: flex; justify-content: space-around; flex-wrap:wrap; }
+		.child{  height: 200px; background: var(--colorBlue); text-align: center;
+		flex:1 1 200px; margin:20px;  display: flex; justify-content: center; align-items: center;}
+		.child:first-child{ background: var(--colorRed); color: var(--colorWhite) ; line-height: 2;}
+		.child:last-child{ background: var(--colorGreen); color: var(--colorWhite) ; line-height: 2;}
+	</style>
+	
+</head>
+<body>
+	<div class="main">
+		<div class="inner">
+			<div class="child">Part1</div>
+			<div class="child">Part2</div>
+			<div class="child">Part3</div>
+		</div>
+	</div>
+</body>
+</html>
