@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CSS Background Clip</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&display=swap" rel="stylesheet">
+	<style>
+		*{margin:0;padding: 0;  box-sizing: border-box;}
+		:root{
+			--colorWhite:#fff;
+			--colorBlue:#3498db;
+			--awidth:20vw;
+			--bwidtth:15vw;
+			--cwidth:40vw;
+			--width:100vw;
+		}
+		html{font-size: 62.5%;}
+		.main{ width:var(--width); height: 100vh;background:#38ada9; display: flex; 
+		justify-content: center; align-items: center; color: #fff; }
+		h2{ background-image: url('https://images.pexels.com/photos/2469122/pexels-photo-2469122.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); font-size: 6rem;
+		background-clip:text; -webkit-background-clip:text;-moz-background-clip:text; color:transparent; background-size: 100% 100%; }
+	</style>
+	
+</head>
+<body>
+	<div class="main">
+		
+		<h2>Mukesh Technical</h2>
+	</div>
+</body>
+</html>
