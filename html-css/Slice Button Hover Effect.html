@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Slice Button Hover Effect</title>
+	<style>
+		*{margin:0;padding: 0;  box-sizing: border-box;}
+		:root{
+			--colorWhite:#fff;
+			--colorBlue:#3498db;
+			--awidth:20vw;
+			--bwidtth:15vw;
+			--cwidth:40vw;
+			--width:100vw;
+		}
+		html{font-size: 62.5%;}
+		.main_div{ width:var(--width); height: 100vh;background:#95a5a6; display: grid; 
+		place-items: center;  }
+		a:link{color: #fff; text-decoration: none;}
+		.myBtn{background:#2ecc71; padding: 2rem 3rem; font-size: 4rem; box-shadow:0px 11px 19px -9px #000;border-radius: 10px; position: relative; overflow: hidden;color: #fff; }
+		.myBtn:before{ content: ''; width:100%; height:10px; background: #fff; position: absolute;    transform: rotate(45deg);  left:-100%; top: 0; transition: all .5s; }
+		.myBtn:hover:before{ left:100%; }
+		.myBtn:hover{background:#2c3e50;transition: all .5s;}
+		
+	</style>
+</head>
+<body>
+	<div class="main_div">
+		<a href="#" class="myBtn">Mukesh Technical</a>
+	</div>
+
+</body>
+</html>
