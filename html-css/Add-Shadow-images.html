@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Add-shadow image</title>
+	<style>
+		*{margin:0;padding: 0;  box-sizing: border-box;}
+		:root{
+			--colorWhite:#fff;
+			--colorBlue:#3498db;
+			--awidth:20vw;
+			--bwidtth:15vw;
+			--cwidth:40vw;
+			--width:100vw;
+		}
+		html{font-size: 62.5%;}
+		.main_div{ width:var(--width); height: 100vh;background:#1dd1a1; display: grid; 
+		place-items: center;  }
+		.center{ width:400px; height: 400px;  display: flex; justify-content: center;align-items: center; }
+		.center img{}
+		.center img:hover{ filter: drop-shadow(10px 10px 20px #000); }
+	</style>
+</head>
+<body>
+<div class="main_div">
+	<div class="center">
+		<img src="user.png" alt=""></div>
+</div>
+</body>
+</html>
