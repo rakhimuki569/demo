@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+		*{ margin:0; padding: 0; box-sizing: border-box; }
+		html{ font-size: 62.5%; }
+		.main{ width:100vw; height: 100vh; background: #f00;  display: flex; justify-content: center; align-items: center; }
+		a{ text-decoration: none; font-size: 3rem; border:.1rem solid #000; color: #000; padding: 1.6rem 3.2rem;position: relative; overflow:hidden; z-index: 1;transition: all .3s linear; background: #fff; }
+		a::before{ content: ''; position: absolute; top:0; left:0; background: #000; transform: translateY(-100%); width:100%;
+		 height: 100%; z-index: -1; transition: all .3s linear; }
+		 a:hover:before{ transform: translateY(0); }
+		 a:hover{ color: #fff; }
+	</style>
+</head>
+<body>
+	<div class="main">
+		<a href="#">Thapa</a>
+	</div>
+</body>
+</html>
