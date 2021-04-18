@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animated heart css</title>
+	<style>
+		*{margin:0;padding: 0;  box-sizing: border-box;}
+		:root{
+			--colorWhite:#fff;
+			--colorBlue:#3498db;
+			--awidth:20vw;
+			--bwidtth:15vw;
+			--cwidth:40vw;
+			--width:100vw;
+		}
+		html{font-size: 62.5%;}
+		.main_div{ width:var(--width); height: 100vh;background:#1dd1a1; display: grid; 
+		place-items: center;  }
+		.center{ width:100px; height: 100px;  display: flex; background: #e74c3c; justify-content: center;align-items: center;  position: relative;  transform: rotate(45deg); animation: beat 2s linear infinite; box-shadow: 0 0  20px #000;}
+		.center:before{content: ''; position: absolute; width:100%; height: 100%; border-radius: 50%; background: #e74c3c; transform: translateY(-50%);}
+		.center:after{content: ''; position: absolute; width:100%; height: 100%; border-radius: 50%; background: #e74c3c; transform: translateX(-50%);}
+		@keyframes beat{
+			0%{transform: scale(1) rotate(45deg);}
+			20%{transform: scale(1.4) rotate(45deg);}
+			50%{transform: scale(1.2) rotate(45deg);}
+			100%{transform: scale(1.4) rotate(45deg);}
+		}
+		
+	</style>
+</head>
+<body>
+<div class="main_div">
+	<div class="center">
+		
+</div>
+</body>
+</html>
