@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Master CSS Advanced Hover Effects</title>
+	<style>
+		*{ margin:0; padding:0; box-sizing: border-box; }
+		html{ font-size: 62.5% }
+		.main{ width:100vw; height: 100vh; background: #fff; display: flex; justify-content: space-around; align-items: center; }
+		.hover-effect{ position: relative; overflow: hidden; }
+		.hover-effect:after{content: ''; position: absolute; top:0; left:0; background: rgba(120,225,220,0.6); width:150%; height: 150%; transform: translateX(-100% ); overflow: hidden; transition: all .8s linear;}
+		img{ width:300px; height: 350px; overflow: hidden; }
+		.hover-effect:hover:after{transform: translateX(-10% ); border-top-right-radius:  50rem;}
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<a href="#" class="hover-effect">
+			<img src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</a>
+		<a href="#" class="hover-effect">
+			<img src="https://images.pexels.com/photos/3759941/pexels-photo-3759941.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</a>
+		<a href="#" class="hover-effect">
+			<img src="https://images.pexels.com/photos/3714145/pexels-photo-3714145.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</a>
+	</div>
+</body>
+</html>
