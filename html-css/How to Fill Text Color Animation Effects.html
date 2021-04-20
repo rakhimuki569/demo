@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>How to Fill Text Color Animation Effects</title>
+	<style>
+		*{ margin:0; padding:0; box-sizing: border-box; }
+		html{ font-size: 62.5%; }
+		.main{ width:100vw; height: 100vh; background: #3498db; display: flex;  justify-content: center; align-items: center;  }
+		h1{ font-size: 20rem; color: #fff; position: relative; }
+		h1:before{ content: 'Mukesh'; position: absolute; top:0; left:0; color: #e74c3c;  width:0px; transition: all 2s linear;  overflow:hidden;}
+		h1:hover:before{ width:100%;text-shadow: 5px 5px 2px #000; }
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h1>Mukesh</h1>
+	</div>
+
+</body>
+</html>
