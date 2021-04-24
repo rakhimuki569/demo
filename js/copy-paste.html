@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Copy - paste</title>
+    </head>
+    <body>
+<p oncopy="alert('oks')" onpaste=return false;>
+   The oncopy event occurs when the user copies the content of an element.
+
+ Tip: The oncopy event also occurs when the user copies an element, for example, an image,
+  created with the img element.
+
+ The onpaste event occurs when the user pastes some content in an element.
+
+ Note: Although the onpaste event is supported by all HTML elements, it is not actually 
+ possible to paste some content in, for example, a p element, UNLESS the element has set contenteditable to "true"
+  (See "More Examples" below).
+</p>
+<textarea onpaste="return false";></textarea>
+    </body>
+</html>
+
+
+
+
