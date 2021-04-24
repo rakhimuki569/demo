@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Copy - paste</title>
+    </head>
+    <body >
+<div id="mydiv">Welcome to my Event time</div><br>
+ <button onclick="starttimer()">Start</button>
+ <button onclick="stop()">Stop</button>
+
+
+ <script>
+     let div = document.getElementById("mydiv");
+     let num=0;
+     let ref;
+     function starttimer(){
+       div.innerHTML="loading.........";
+       ref = setInterval(()=>{
+           div.innerHTML=`time start now ${num}`;
+           num++;
+       },1000)
+     }
+     function stop(){
+         clearInterval(ref);
+     }
+ </script>
+    </body>
+</html>
