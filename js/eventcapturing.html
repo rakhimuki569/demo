@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event - catureing</title>
+        <style>
+            *{ margin:0; padding: 0; box-sizing: border-box;}
+            html{ font-size: 62.5%;}
+            body{ background: #95a5a6; width: 100vw; height: 100vh; display: flex; 
+            justify-content: center;  align-items: center;  }
+            .parent{ width: 40vw; height: 60vh; background: #2ecc71;border: 5px solid rgba(0,0, 0, 0.5); display: flex; 
+            justify-content: center;  align-items: center;}
+            .child{ width: 20vw; height: 20vh; background: #2980b9;border: 5px solid rgba(0,0, 0, 0.5);}
+        </style>
+    </head>
+    <body>
+  <!-- <p>what is JavaScript Event Capturing Explained in Hindi? 
+Event capturing is the event that starts from the top element to 
+the target element. It is the opposite of Event bubbling, which starts 
+from the target element to the top element.</p> -->
+    <div class="parent" id="parentid">
+        <div class="child" id="childid"></div>
+    </div>
+
+    <script>
+        var parent = document.getElementById("parentid");
+        var child = document.getElementById("childid");
+        parent.addEventListener('click',parentcall,false);
+        child.addEventListener('click',childcall,false);
+         function parentcall(){
+             alert("parent Div call");
+         }
+         function childcall(){
+             alert("child Div call");
+            event.stopPropagation();
+         }
+    </script>
+    </body>
+</html>
+
+
+
+
