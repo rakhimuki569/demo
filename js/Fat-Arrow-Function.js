@@ -5,3 +5,14 @@
 // { expression } into arguments fat arrow symbol expression.
 
 
+// function abc(){
+//     let a=10;
+//     let b=12;
+//     console.log(a+b);
+
+// }
+// abc();
+ 
+
+const abc = (a,b)=> a+b;
+console.log(abc(2,4));
