@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event - bubbing</title>
+        <style>
+            *{ margin:0; padding: 0; box-sizing: border-box;}
+            html{ font-size: 62.5%;}
+            body{ background: #95a5a6; width: 100vw; height: 100vh; display: flex; 
+            justify-content: center;  align-items: center;  }
+            .parent{ width: 40vw; height: 60vh; background: #2ecc71;border: 5px solid rgba(0,0, 0, 0.5); display: flex; 
+            justify-content: center;  align-items: center;}
+            .child{ width: 20vw; height: 20vh; background: #2980b9;border: 5px solid rgba(0,0, 0, 0.5);}
+        </style>
+    </head>
+    <body>
+  <!-- <p>What is Event Propagation in JavaScript Hindi? Event Bubbling and Event Capturing in JavaScript in Hindi? 
+      Event bubbling and capturing are two ways of event propagation in the HTML DOM API, 
+    when an event occurs in an element inside another element, and both elements have registered a handle
+     for that event. 
+    The event propagation mode determines in which order the elements receive the event.</p> -->
+    <div class="parent" onclick="parentcall()">
+        <div class="child" onclick="childcall()"></div>
+    </div>
+
+    <script>
+         function parentcall(){
+             alert("parent Div call");
+         }
+         function childcall(){
+             alert("child Div call");
+             event.stopPropagation();
+         }
+    </script>
+    </body>
+</html>
+
+
+
+
