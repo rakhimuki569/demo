@@ -1,0 +1,51 @@
+<script>
+
+    // create class and make object and acceess class method
+//    class students{
+//        biodata(){
+//            console.log("i m class method");
+
+//        }
+//    }
+//    let obj1 = new students;
+//    obj1.biodata();
+         //  make constructor argument pass
+// class students{
+//     constructor(names){
+//         this.myname = names;
+//     }
+//        biodata(){
+//            console.log(`my name is ${this.myname}`);
+//        }
+//    }
+//    let obj1 = new students("muki");
+//    let obj2 = new students("Mukesh");
+//    obj1.biodata();
+//    obj2.biodata();
+
+class students{
+    constructor(names){
+        this.myname = names;
+
+    }
+        biodata(){
+           return`my name is ${this.myname}`;
+
+       }
+   }
+   class player extends students{
+          constructor(name,game){
+              super(name,game);
+              this.mygame=game
+          }
+     play_boidata(){
+         return `${super.biodata()} i am player of ${this.mygame}`;
+     }
+
+   }
+   
+   let obj1 = new player("muki","gootball");
+   
+      console.log(obj1.play_boidata());
+  
+</script>
