@@ -1,0 +1,34 @@
+<script>
+    // Higher-order functions are functions that take other functions as arguments or return functions 
+    // as their results. 
+    // Taking another function as an argument is often referred to as a callback function
+    //  because it is called back by the higher-order function. This is a concept that Javascript uses a lot. 
+
+
+    let interviewquestion = (name)=>{
+        if(name === "muki"){
+            return (topic)=> {
+                console.log(`Hi ${name}. what is ${topic} plz explain`);
+
+            }
+        }
+            if(name === "mukesh"){
+            return (topic)=> {
+                console.log(`Hi ${name}. what is ${topic} plz explain`);
+
+            }
+        }
+        else{
+            return()=>{
+                console.log("welcom try again");
+            }
+        }
+
+    }
+    // interviewquestion("muki")("UI");
+    // interviewquestion("mukesh")("UX");
+    var candi = interviewquestion("muki");
+    candi("ux");
+    candi("ui");
+
+</script>
