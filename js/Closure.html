@@ -1,0 +1,35 @@
+<script>
+//      JavaScript closure explained . 
+//       A closure is the combination of a function and the lexical environment within which that function was declared. 
+
+// closure in action that is inner function can have access to the outer function variables/parameters as well as
+//  all the global variables.
+//  function outer(a){
+//      let b =10;
+//      function inner(){
+//          console.log(a+b);
+//      }
+//      inner();
+//  }
+
+//  function outer(a){
+//      let b =10;
+//      function inner(){
+//          console.log(a+b);
+//      }
+//      return inner();
+//  }
+//  outer(4);
+
+ function outer(a){
+     let b =10;
+     return function inner(){
+         console.log(a+b);
+     }
+     
+ }
+var abc=  outer(4);
+console.dir(outer(4));
+abc();
+
+</script>
