@@ -1,0 +1,21 @@
+<script>
+    // Advanced JavaScript Call Method. 
+    // Call() is a predefined javascript method,
+    //  which is used to write methods for different objects. It calls the method, 
+    //  taking the owner object as an argument. The keyword this refers to the “owner” of the function 
+    //  or the object it belongs to. 
+    const youtuber = {
+        name:"muki",
+        content:"JS",
+        feature: function(rating){
+            console.log(` my name is ${this.name} and my favorite lang is ${this.content} my lucky no.${rating} `);
+        }
+    }
+    // youtuber.feature();
+    const youtuber2 = {
+        name:"mukesh",
+        content:"JavaScript"
+    }
+    youtuber.feature.call(youtuber2,5);
+   
+</script>

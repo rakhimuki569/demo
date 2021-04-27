@@ -1,0 +1,20 @@
+<script>
+     let interviewquestion = (name)=>{
+        return function(topic){
+         if(name === "muki"){
+            console.log(`Hi ${name}. what is ${topic} plz explain`)
+         }
+         else if(name === "muki"){
+            console.log(`Hi ${name}. what is ${topic} plz explain`)
+         }else{
+            console.log("welcom try again");
+         }
+        }
+
+    }
+    // interviewquestion("muki")("UI");
+    // interviewquestion("mukesh")("UX");
+    var candi = interviewquestion("muki");
+    candi("ux");
+    candi("ui");
+</script>
