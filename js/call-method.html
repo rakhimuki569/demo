@@ -7,8 +7,8 @@
     const youtuber = {
         name:"muki",
         content:"JS",
-        feature: function(rating){
-            console.log(` my name is ${this.name} and my favorite lang is ${this.content} my lucky no.${rating} `);
+        feature: function(rating,sub){
+            console.log(` my name is ${this.name} and my favorite lang is ${this.content} my lucky no.${rating} ${sub}`);
         }
     }
     // youtuber.feature();
@@ -16,6 +16,6 @@
         name:"mukesh",
         content:"JavaScript"
     }
-    youtuber.feature.call(youtuber2,5);
+    youtuber.feature.call(youtuber2,5,"oh");
    
 </script>
