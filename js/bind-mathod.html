@@ -1,0 +1,36 @@
+<script>
+    // What is bind() method in javascript?
+    //  The bind() method creates a new function that, when called, has its this keyword set to the provided value,
+    //  with a given sequence of arguments preceding any provided when the new function is called.
+
+    // const youtuber = {
+    //     name:"muki",
+    //     content:"JS",
+    //     feature: function(){
+    //         console.log(` my name is ${this.name} and my favorite lang is ${this.content} `);
+    //     }
+    // }
+    // // let fun = youtuber.feature;
+    // let fun = youtuber.feature.bind(youtuber);
+
+    // fun();
+    const youtuber = {
+        name:"muki",
+        content:"JS"
+        
+    }
+    const youtuber2 = {
+        name:"mukesh",
+        content:"JavaScript"
+        
+    }
+    const feature =  function(){
+            console.log(` my name is ${this.name} and my favorite lang is ${this.content} `);
+        }
+    // let fun = youtuber.feature;
+    let fun = feature.bind(youtuber);
+    let fun2 = feature.bind(youtuber2);
+
+    fun();
+    fun2();
+</script>
