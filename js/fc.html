@@ -1,0 +1,51 @@
+<script>
+
+ // first class citizen
+
+        // 1. in javascript  we can assign  afunction to a variable
+   // also  as method
+   //aasignning  a method in javavscript is a super easy as well. similar to how we can assign a function to variable
+   // we can  assign  a function as value to a key in object.
+
+
+    // let sum = function(){
+    //     console.log("okk");
+    // }
+    // sum();
+
+
+
+    // 2. Pass  a function  as argument 
+   //  since function are first class citizen in javascript. we are able to pass them
+      
+
+
+      // let sum = function(a,b){
+    //     console.log(a+b);
+    // }
+    // sum(13,12); 
+
+
+
+    // let myname =() => {
+    //     return "hello"
+
+    // }
+    // let gretting = (sayhi,name)=> {
+    //     console.log(sayhi() +" "+ name);
+    // }
+    // gretting(myname,"muki");
+    
+    
+    // 3. recurrring function 
+   // this  is a key  concept when its comes to functional programing;
+  
+    let  ques = ()=>{
+        return ()=>{
+            console.log("i m recurring method");
+        }
+    }
+
+ques()();
+
+</script>
