@@ -1,0 +1,44 @@
+<script>
+//     A callback is a function that is to be executed after another function has finished executing — 
+//     hence the name ‘call back’.
+
+// Any function that is passed as an argument is called a callback function.
+
+// Why do we need Callbacks?
+
+// For one very important reason — JavaScript is an event-driven language. 
+// This means that instead of waiting for a response before moving on, 
+// JavaScript will keep executing while listening for other events.
+
+// Callbacks are a way to make sure a certain code doesn’t execute until another code has already finished execution
+
+
+
+// function funA(){
+//     console.log("funA");
+
+// }
+// function funb(){
+//     console.log("funb");
+
+// }
+// funA();
+// funb();
+
+
+/// i want to hold funA function
+
+function funA(){
+    setTimeout(function(){
+        console.log("funA");
+
+    },3000)
+   
+}
+function funb(){
+    console.log("funb");
+
+}
+funA();
+funb();
+</script>
