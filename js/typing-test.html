@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typing -test</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box;}
+        .main{width:100vw; height: 100vh;background: #3498db; position: relative;}
+        .center{ position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%); text-align: center;}
+        h2{ color: #fff; font-size: 40px;line-height: 2;}
+        #msg{ color: #222; padding: 10px 0; font-size: 19px;}
+        textarea{ width: 400px; height: 150px; background: #2c3e50; color: #fff;   padding: 10px; 
+        font-size: 20px; box-shadow: 0 0 20px #000; border-radius: 10px;}
+        button{ background: #27ae60; color: #fff; padding: 20px 50px;  font-size: 20px; border: none;
+         margin: 10px 0; box-shadow: 0 0 10px #000; border-radius: 10px;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+               <h2>Welcome typing test</h2>
+               <p id="msg"></p><br>
+               <textarea  id="typeword"placeholder="Plz typing" ></textarea><br>
+               <button id="mybtn">Start</button>
+        </div>
+    </div>
+    <script>
+        let strword =["Even though you have an appointment","interviewer knows who you are",
+    "include a handshake as part of your"];
+    var msg= document.getElementById("msg");
+    var typingarea= document.getElementById("typeword");
+    var mybtn = document.getElementById("mybtn");
+    let starttime,endtime;
+    const playgame= ()=>{
+        let random= Math.floor(Math.random()*strword.length);
+        msg.innerHTML=strword[random];
+        let date =new Date();
+        starttime =date.getTime();
+        mybtn.innerHTML="Done";
+    }
+    const endplay = () =>{
+        let date = new Date();
+        endtime= date.getTime();
+        let total=((endtime - starttime)/ 1000);
+        let totalstr=typingarea.value; 
+        console.log(totalstr);
+        let wordcount= wordcounter(totalstr);
+        if(wordcount < 2){
+            msg.innerHTML = " plz typing"; 
+            mybtn.innerHTML="Start";
+        }
+        else{
+            let speed = (Math.round(wordcount/total)*60);
+         let finalmsg = " you typed total "+speed+ "word per minute";
+         msg.innerHTML = finalmsg;
+         mybtn.innerHTML="Start";
+         typingarea.value=" ";
+        }
+        
+
+    }
+    const wordcounter = (str)=>{
+        let response= str.split(' ').length;
+        console.log(response);
+       return response;
+
+    }
+    mybtn.addEventListener("click", function(){
+       
+        if(this.innerHTML == "Start"){
+            // typingarea.disabled= false;
+            playgame();
+
+        }else if(this.innerHTML == "Done"){
+            
+            // typingarea.disabled= true;
+             endplay();
+        }
+        
+
+    });
+    </script>
+</body>
+</html>
