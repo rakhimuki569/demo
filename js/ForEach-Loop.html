@@ -1,0 +1,28 @@
+<script>
+//     what is ForEach Loop in JavaScript? 
+//     JavaScript Array forEach() Method explained.  
+//      forEach() calls a provided callback function once for each element in an array in ascending order. 
+//      It is not invoked for index properties that have been deleted or are uninitialized.
+//       (For sparse arrays, see example below.)
+
+// the callback is invoked with three arguments:
+
+// the value of the element
+// the index of the element
+// the Array object being traversed
+// If a thisArg parameter is provided to forEach(), it will be used as callback's this value.
+
+let ramayan =["Ram","Sita","Laxman","Hanuman"];
+ramayan.forEach((ele,ind)=>{
+    console.log(ind+"--"+ele);
+
+});
+ let num =[2,5,6,7,8]
+ num.forEach((ele,ind ,arr)=>{
+    console.log(arr[ind]+100);
+
+});
+
+
+
+ </script>
