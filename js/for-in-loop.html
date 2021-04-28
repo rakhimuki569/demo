@@ -1,0 +1,22 @@
+<script>
+//     what is Enumerable in javascript? 
+//     The for/in statement loops through the properties of an object.
+//      The block of code inside the loop will be executed once for each property.
+// What enumerable in Javascript means
+// It simply means that the property will show up if you iterate over the object using for..inloop or Object.keys. 
+// This means we can iterate over object keys if keys are set to enumerable (By default enumerable)
+
+
+let obj1 ={
+    name:"muki",
+    class:"B.Tech"
+}
+for(var prop in obj1){
+    console.log(prop);
+    console.log(obj1[prop]);
+}
+let ramayan =["Ram","Sita","Laxman","Hanuman"];
+for(var prop in ramayan ){
+    console.log(prop);
+}
+</script>
