@@ -1,0 +1,34 @@
+<script>
+    // Synchronous javascript code is executed in sequence – 
+    // each statement waits for the previous statement to finish before executing. 
+    // Asynchronous javascript code doesn't have to wait – your program can continue to run.
+     
+    //  const  func1 = () =>{
+    //      console.log("func1 starting");
+
+    //        func2();
+    //        console.log("func1 ending");
+    //  }
+    //  const  func2 = () =>{
+    //      console.log("func2 starting");
+
+          
+    //  }
+    //  func1();
+    const  func1 = () =>{
+         console.log("func1 starting");
+
+           func2();
+           console.log("func1 ending");
+     }
+     const  func2 = () =>{
+         setTimeout(()=>{
+            console.log("func2 starting");
+
+         },3000);
+         
+
+          
+     }
+     func1();
+</script>
