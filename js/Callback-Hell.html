@@ -1,0 +1,36 @@
+<script>
+    // what is callback hell and how can it be avoided in JavaScript?
+    //  I will show you the old way of doing Asynchronous JavaScript with Callbacks and because
+    //   of the callbacks inside another callbacks scenario in javascript makes the code difficult to manage.
+    //   So, what I mean is Callback Hell. 
+    // So watch the video and for reference source code and important other videos link are below.
+
+    // callback hell-  problem
+
+    //AP1 
+    // 1. 2s student  roll no
+    // 2. 2s name and age
+    // 3. 2s gender
+
+    const getRollNo = ()=>{
+        console.log("API Start");
+        setTimeout(()=>{
+            let rollno=[1,2,3,4,5];
+            console.log(rollno);
+            setTimeout((roll)=>{
+                const biodata={
+                    name:"muki",
+                    classw:"2nd"
+                }
+                console.log(` my roll no is ${roll} and my name is ${biodata.name} , i am read in ${biodata.classw}`);
+                setTimeout((names)=>{
+                    biodata.gender="male";
+
+  console.log(` my roll no is ${roll} and my name is ${names} , i am read in ${biodata.classw} i m ${biodata.gender}`);
+                },2000,biodata.name)
+            },2000,rollno[1])
+        },2000);
+
+    }
+    getRollNo();
+</script>
