@@ -1,0 +1,10 @@
+<script>
+//    Create an India coronavirus app tracker using fetch API with async-await in javascript in Hindi.
+//     We will cover how to use JavaScript Fetch API and using Async/Await together to get JSON data using AJAX call.
+ async function covid(){
+     const mydata = await fetch('https://api.covid19api.com/summary');
+     const jsdata = await mydata.json();
+     console.log(jsdata.Countries[76]);
+ }
+ covid()
+</script>
