@@ -1,0 +1,20 @@
+<p id="apicrona">
+
+</p>
+
+<script>
+    // How to get the CoronaVirus data using Covid-19 API using AJAX CALL with Fetch API in Promises in JavaScript. 
+    // The Fetch API. The Fetch API provides a fetch() method defined on the window object,
+    //  which you can use to perform requests.
+    //  This method returns a Promise that you can use to retrieve the response of the request.
+
+    fetch('https://api.covid19api.com/summary').then((apidata)=>{
+       // console.log(apidata);
+        return apidata.json();
+    }).then((acctal)=>{
+        const india = acctal.Countries[76];
+        console.log(india);
+        document.getElementById("apicrona").innerHTML=`in ${india.Country}, total case is${india.TotalConfirmed} `;
+      
+    })
+</script>
