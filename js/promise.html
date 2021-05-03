@@ -1,0 +1,50 @@
+<script>
+//     Why JavaScript Promises are the most important topic to master javascript? 
+//     What is Promise javascript Resolve Reject function? 
+//     How and When to use Promises in Javascript in Hindi? 
+//     So Promises are used to handle asynchronous operations in JavaScript.
+// A Promise has Three states:
+// fulfilled: Action related to the promise succeeded.
+// rejected: Action related to the promise failed.
+// pending: Promise is still pending i.e not fulfilled or rejected yet.
+
+// Promises can be consumed by registering functions using .then and .catch methods.
+
+// then()
+// then() is invoked when a promise is either resolved or rejected.
+
+// catch()
+// catch() is invoked when a promise is either rejected or some error has occurred in execution
+
+
+const pobj1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+         let rollno =[1,2,3,4,5];
+         resolve(rollno)
+         //reject('error not get')
+    },2000)
+
+})
+const getbiodata = (indexdata)=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout((indexdata)=>{
+            const biodata={
+                    name:"muki",
+                    classw:"2nd"
+                }
+                resolve(` my roll no is ${indexdata} and my name is ${biodata.name} , i am read in ${biodata.classw}`)
+        },2000,indexdata)
+
+    })
+}
+pobj1.then((roll)=>{
+    console.log(roll);
+    return getbiodata(roll[1])
+
+    }).then((ok)=>{
+        console.log(ok);
+
+}).catch((error)=>{
+    console.log(error);
+})
+</script>
