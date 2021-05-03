@@ -1,0 +1,56 @@
+<script>
+//     ES8 async/await functions . 
+//      Now, What is async/await in JavaScript? 
+// The async function declaration defines an asynchronous function, which returns an AsyncFunction object.
+
+// When an async function is called, it returns a Promise.
+//  When the async function returns a value, the Promise will be resolved with the returned value.
+//   When the async function throws an exception or some value, the Promise will be rejected with the thrown value.
+// An async function can contain an await expression, 
+// that pauses the execution of the async function and waits for the passed Promise's resolution, and 
+// then resumes the async function's execution and returns the resolved value.
+
+const pobj1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+         let rollno =[1,2,3,4,5];
+         resolve(rollno)
+         //reject('error not get')
+    },2000)
+
+})
+const getbiodata = (indexdata)=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout((indexdata)=>{
+            const biodata={
+                    name:"muki",
+                    classw:"2nd"
+                }
+                resolve(` my roll no is ${indexdata} and my name is ${biodata.name} , i am read in ${biodata.classw}`)
+        },2000,indexdata)
+
+    })
+}
+// pobj1.then((roll)=>{
+//     console.log(roll);
+//     return getbiodata(roll[1])
+
+//     }).then((ok)=>{
+//         console.log(ok);
+
+// }).catch((error)=>{
+//     console.log(error);
+// })
+
+async function getdata(){
+
+ const rollNo = await pobj1;
+ console.log(rollNo);
+ const bio = await getbiodata(rollNo[2]);
+ console.log(bio);
+ return bio;
+}
+const datame= getdata().then((myname)=>{
+    console.log(myname);
+});
+
+</script>
