@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>insatagram like</title>
+    <style>
+     *{ margin:0; padding: 0; box-sizing: border-box;}
+     html{ font-size: 62.5%;}
+     .main{ width:100vw; height: 100vh; display: flex; justify-content: center; align-items: center;
+    flex-direction: column; background: #ccc;}
+    h1{ font-size: 3rem; margin-bottom: 2rem; text-transform: capitalize;}
+    .innear img{ width:40rem; height: 50rem; box-shadow: 0 2rem 1rem 0rem rgba(0,0,0,0.3);position: relative;
+    cursor: pointer;}
+    .innear i{ color: red;  position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);
+    animation: heart .8s linear;}
+
+    .clickCount{ color: red;}
+    @keyframes heart {
+        100%{ transform: scale(12); opacity: 0;}
+    }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>it is click <span class="clickCount"></span> times</h1>
+        <div class="innear">
+            <img src="https://images.pexels.com/photos/4611972/pexels-photo-4611972.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="love">
+            <!-- <i class="fas fa-heart"></i> -->
+        </div>
+    </div>
+    <script>
+        let clickArea = document.querySelector(".innear");
+        let count = document.querySelector(".clickCount");
+        let counter =0;
+        const like = (e)=>{
+            let image = document.createElement("i");
+            image.classList="fas fa-heart";
+            clickArea.appendChild(image);
+            setTimeout(()=>{
+                image.remove();
+            },800)
+        }
+        clickArea.addEventListener("click",(e)=>{
+          count.innerHTML = ++counter;
+          like(e);
+        })
+
+    </script>
+</body>
+</html>
