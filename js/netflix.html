@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>netflix</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box;}
+        html{ font-size: 62.5%;}
+        .main{ background: #141414; width: 100vw; height: 100vh;}
+        .logo-scetion{ width:95vw; margin: auto; height: 7rem; }
+        .main_div{ width:100vw; height: 85vh; display: flex; justify-content: center; align-items: center;
+        flex-direction: column; color: #fff;}
+        .main_div h1{ font-size: 4rem; margin-bottom: 2rem; text-transform: capitalize;}
+        .member-div{ display: flex;justify-content: center; align-items: center; flex-wrap:wrap;}
+        .member-div .btn,.addicon{ height: 10vh; min-height: 8.4rem; max-height: 20rem;
+         width: 10vw; min-width: 8.4rem; max-width: 20rem; border-radius: .6rem; border: none; outline:none;
+         margin-top: 3rem; margin-right: 2.4rem; position: relative;}
+         .member-div .btn:hover{
+             box-shadow: inset 0 0 0 5px  rgba(255,255,255,0.9);
+         }
+
+         .member-div .btn:nth-child(1){
+             background: #e67e22;
+         }
+         .member-div .btn:nth-child(2){
+             background: #27ae60;
+         }
+         .member-div .btn:nth-child(3){
+             background: #c0392b;
+         }
+         .member-div .btn span,.addicon span{ width: inherit;
+             position:absolute;
+             bottom:-20px;
+             left:0;
+             text-transform: capitalize;
+             color: rgba(153,153,153);
+             font-size: 1.4rem;
+         }
+         .addicon{ background: transparent;}
+         .addicon:hover{ background:#fff ;}
+         .addicon:hover>.fa-plus-circle{ opacity: 1;}
+         .fa-plus-circle{ opacity: 0.8; font-size: 4vw; color:gray;}
+
+         
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo-scetion">
+            <img src="../html-css/netflix.png" width="100">
+        </div>
+        <div class="main_div">
+        <h1>who's watching</h1>
+        <div class="member-div">
+            
+            <button class="addicon"><i class="fas fa-plus-circle"></i><span>Add Profile</span></button>
+        </div>
+    </div>
+    </div>
+    <script>
+        const users = ['Ramji','Sita','laxman'];
+        const memberDiv = document.querySelector(".member-div");
+        const addicon = document.querySelector(".addicon");
+        const userIcons= ()=>{
+            users.reverse();
+            users.map((curelem)=>{
+                memberDiv.insertAdjacentHTML('afterbegin',`
+                <button class="btn"><span>${curelem}</span></button>`);
+            } )
+        };
+        addicon.addEventListener('click',()=>{
+            let username = prompt('please Enter  your name');
+            if(username !== null && !users.includes(username) ){
+                users.push(username);
+                console.log(users);
+                memberDiv.insertAdjacentHTML('afterbegin',`
+                <button class="btn"><span>${username}</span></button>`);
+            }else{
+                alert("username is already Exixts");
+            }
+
+        })
+        userIcons();
+        
+    </script>
+</body>
+</html>
