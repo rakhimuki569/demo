@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz -app</title>
+    <style>
+        *{ margin: 0 ; padding: 0; box-sizing: border-box;}
+        html{font-size: 62.5%;}
+        .main{ width: 100vw; height: 100vh; background:hsl(206, 92%, 94%); display: grid; place-items: center;}
+        .innear{ width:40vw; background: #fff; padding: 3rem 8rem; border-radius: 1rem;
+         box-shadow: 0 1rem 1rem -0.7rem rgba(0,0,0,0.4); }
+        .innear h1{ font-size: 3rem; margin:1rem 0 4rem 0;font-weight: 400;}
+        .innear  li{ list-style: none; margin-top:1.5rem; font-size: 2rem;}
+        input{ cursor: pointer;}
+        #submit,.btn{ padding: 1rem 3rem ; border:none; border:none; font-size: 2rem;
+        display:block; margin: auto; text-transform: uppercase; color: #fff; background: #74b9ff;
+        margin-top: 3rem; }
+        #submit:hover{ background: #0984e3; }
+        #showScore{  background: #dfe6e9; padding:3rem; margin-top: 3rem;}
+        .scoreArea{ display: none;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="innear">
+            <h1 class="question">Question come here</h1>
+            <ul>
+                <li>
+                     <input type="radio" name="answer" id="ans1" class="answer">
+                     <label for="ans1"  id="option1">option answer</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="ans2" class="answer">
+                    <label for="ans2"  id="option2">option answer</label>
+               </li>
+               <li>
+                <input type="radio" name="answer" id="ans3" class="answer">
+                <label for="ans3"  id="option3">option answer</label>
+           </li>
+           <li>
+            <input type="radio" name="answer" id="ans4" class="answer">
+            <label for="ans4"  id="option4">option answer</label>
+       </li>
+            </ul>
+            <button id="submit">Submit</button>
+            <div id="showScore" class="scoreArea"></div>
+        </div>
+    </div>
+    <script>
+      const quizDB=[
+          {
+          question:"Q1: what is full form of HTML",
+           a:"oh my god",
+           b:"hyper nahi pata",
+           c:"none",
+           d:"hypertext markerup langauge",
+           ans:"ans4"
+          },
+          {
+          question:"Q2: what is full form of css",
+           a:"cascading style sheet",
+           b:"cascading style sheap",
+           c:"none",
+           d:"All",
+           ans:"ans1"
+          }
+      ]
+          
+     const question = document.querySelector(".question");
+     const option1 = document.querySelector("#option1");
+     const option2 = document.querySelector("#option2");
+     const option3 = document.querySelector("#option3");
+     const option4 = document.querySelector("#option4");
+     const submit = document.querySelector("#submit");
+     const answers = document.querySelectorAll(".answer");
+      const showScore = document.getElementById("showScore");
+     let questionCount =0;
+     let score = 0;
+     const loadQuestion =()=>{
+
+         //console.log(quizDB[0].question);
+         const questionList = quizDB[questionCount];
+         question.innerHTML = questionList.question;
+         option1.innerHTML = questionList.a;
+         option2.innerHTML = questionList.b;
+         option3.innerHTML = questionList.c;
+         option4.innerHTML = questionList.d;
+     }
+     loadQuestion();
+     const getCheckAnswer = ()=>{
+         let answer;
+         answers.forEach((curansEle)=>{
+             if(curansEle.checked){
+                 answer = curansEle.id;
+
+             }
+
+         });
+         return answer;
+
+     }
+     submit.addEventListener('click',()=>{
+         const chaeckAnswer = getCheckAnswer();
+         //console.log(chaeckAnswer);
+         if(chaeckAnswer == quizDB[questionCount].ans ){
+            // console.log("ok");
+            score++;
+            
+         }
+         questionCount++
+         if(questionCount < quizDB.length){
+            loadQuestion();
+
+         }else{
+            showScore.innerHTML = `
+            <h3> you score ${score}/${quizDB.length}</h3>
+            <button class="btn" onclick="location.reload()">Start Again</button>
+            `;
+            showScore.classList.remove("scoreArea");
+
+
+         }
+console.log(score);
+     })
+    </script>
+</body>
+</html>
