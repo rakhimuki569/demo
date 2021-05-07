@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp. convert</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box;}
+        body{ width:100vw; height:100vh; background:cadetblue; display: grid; place-items: center;}  
+        form{ width:40vw; padding: 30px; background: coral; }
+    </style>
+</head>
+<body>
+    <form onsubmit= "calc(); return false">
+        <label>Temp convert Celsius to Fahrenheit conversion and vice-versa</label>
+        <input type="number" id="tempValue">
+        <select name="tempdiff" id="tempdiff">
+            <option value="cal">Celsius</option>
+            <option value="fah">Fahrenheit</option>
+        </select><br>
+        <input type="submit" name="submit">
+        <div id="resultarea"></div>
+    </form>
+    <script>
+        function calc(){
+         const tempValue = document.getElementById("tempValue").value;
+        //  alert(tempValue);
+        const tempdiff = document.getElementById("tempdiff");
+        const indexvalue = tempdiff.options[tempdiff.selectedIndex].value;
+        const celltofeh = (cel)=>{
+            let fehi =(cel * 9/5) + 32;
+            return fehi;
+
+        }
+        const fehtocell = (feh)=>{
+            let cele = (feh - 32) * 5/9;
+            return cele;
+
+        }
+        let result;
+        if(indexvalue === 'cal'){
+            result = celltofeh(tempValue);
+            document.getElementById("resultarea").innerHTML=`${result} °Fahrenheit`;
+        }else{
+            result = fehtocell(tempValue);
+            document.getElementById("resultarea").innerHTML=`${result} °Celsius`;
+        }
+        }
+
+    </script>
+</body>
+</html>
