@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - vaildation</title>
+    <style>
+        *{ margin:0; padding: 0; box-sizing: border-box;}
+        html{ font-size: 62.5%;}
+        .main{ width:100vw; height: 100vh; background: #95a5a6; display: grid; place-items: center;}
+        .linear{ width:calc(100vw - 65vw); background: #ecf0f1; padding: 3rem;
+         box-shadow: 0 1rem 2.3rem 2rem rgba(0,0,0,0.3); border-radius: 1rem; }
+         .linear h2{ font-size: 3rem; text-align: center; margin: 1rem 0 4rem; text-transform: uppercase;font-weight: bold;}
+         .form-control{ width:100%; position: relative; margin: 1rem 0;}
+         .form-control label{ display: inline-block; color: #222; font-weight: 700; margin-bottom: .3rem; 
+         font-size: 1.2rem;}
+         .form-control input{ width:100%; outline: none; padding: 1rem 1rem; height: 3.5rem; border-radius: .5rem;
+         border:.1rem solid #615e5e;}
+         .btn{ padding: 1rem 2rem; margin: auto; display: flex; background: #3498db; color: #fff;
+         border:none;box-shadow: 0 1rem 2.3rem 2rem rgba(0,0,0,0.3);}
+         span{ display: inline-block; color: red; font-size: 1.5rem;}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="linear">
+            <h2>Registration Form</h2>
+            <form onsubmit="return valid()" >
+                <div class="form-control">
+                    <label>User Name</label>
+                    <input type="text" class="control" id="user">
+                    <span id="erroruser"></span>
+                </div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="text" class="control" id="email">
+                    <span id="erroremail"></span>
+                </div>
+                <div class="form-control">
+                    <label>Contact No.</label>
+                    <input type="text" class="control" id="phone">
+                    <span id="errorphone"></span>
+                </div>
+                <div class="form-control">
+                    <label>Password</label>
+                    <input type="text" class="control" id="pass">
+                    <span id="errorpass"></span>
+                </div>
+                <div class="form-control">
+                    <label>Confirm Password</label>
+                    <input type="text" class="control" id="cpass">
+                    <span id="errorcpass"></span>
+                </div>
+             <input type="submit"   class="btn">
+
+            </form>
+        </div>
+    </div>
+    <script>
+  function valid(){
+    const user= document.getElementById("user");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const pass = document.getElementById("pass");
+    const cpass = document.getElementById("cpass");
+    const erroruser = document.getElementById("erroruser");
+    const erroremail = document.getElementById("erroremail");
+    const errorphone = document.getElementById("errorphone");
+    const errorpass = document.getElementById("errorpass");
+    const errorcpass = document.getElementById("errorcpass");
+
+
+        const userval= user.value;
+        const emailval = email.value;
+        const phoneval = phone.value;
+        const passval= pass.value;
+        const cpassval = cpass.value;
+       let userPattern = /^[A-Za-z. ]{3,20}$/;
+       let emailPattern= /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}$/;
+       let passwordPattern= /^(?=.*[0-9])(?=.*[@#$%^&])[A-Za-z0-9!@#$%^&*]{6,20}$/;
+       let phonePattern =  /^[789][0-9]{9}$/;
+       console.log(userPattern.test(userval));
+       if(userPattern.test(userval)){
+        user.style.borderColor="green";
+        erroruser.innerText =" ";
+       }
+       else{
+        user.style.borderColor="red";
+        erroruser.innerText =" plz enter correct name";
+        return false;
+       }
+       if(emailPattern.test(emailval)){
+        email.style.borderColor="green";
+        erroremail.innerText ="";
+       }
+       else{
+        email.style.borderColor="red";
+        erroremail.innerText ="plz enter correct email";
+        return false;
+       }
+       if(passwordPattern.test(passval)){
+        pass.style.borderColor="green";
+        errorpass.innerText =" ";
+       }
+       else{
+        pass.style.borderColor="red";
+        errorpass.innerText =" plz enter correct pass";
+        return false;
+       }
+       if(cpassval.match(passval)){
+        cpass.style.borderColor="green";
+        errorcpass.innerText =" ";
+       }
+       else{
+        cpass.style.borderColor="red";
+        errorcpass.innerText =" no match";
+        return false;
+       }
+       if(phonePattern.test(phoneval)){
+        phone.style.borderColor="green";
+        errorphone.innerText =" ";
+       }
+       else{
+        phone.style.borderColor="red";
+        errorphone.innerText =" plz enter correct mobile";
+        return false;
+       }
+  }
+        
+    </script>
+</body>
+</html>
