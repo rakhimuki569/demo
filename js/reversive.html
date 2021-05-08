@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse string  without reversive function </title>
+    <style>
+        *{ margin:0; padding: 0; box-sizing: border-box;}
+        h2{ text-align: center; font-size: 50px; text-transform: capitalize;}
+    </style>
+</head>
+<body>
+    <h2>reverse string  without reversive function</h2>
+    <input type="text" id="input1" onkeyup = "reve()">
+    <input type="text" id="show">
+    <script>
+        const reve = ()=>{
+        let input1 = document.getElementById("input1").value;
+        
+        let rev = " ";
+        for( var i = input1.length-1; i>=0;i--){
+         rev += input1[i];
+        } 
+        document.getElementById("show").value = rev;
+    }
+    </script>
+</body>
+</html>
