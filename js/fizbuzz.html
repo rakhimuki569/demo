@@ -1,0 +1,19 @@
+<script>
+     let mylist = [];
+      var i =1;
+      while(i <= 100){
+          if((i%3)==0 && (i%5)==0){
+              mylist.push("fizzbuzz");
+          }else if(i%3== 0){
+            mylist.push("fizz");
+          }
+          else if(i%5== 0){
+            mylist.push("buzz");
+          }else{
+            mylist.push(i);
+          }
+          i++;
+      }
+     console.log(mylist);
+    
+</script>
