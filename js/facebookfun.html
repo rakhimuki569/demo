@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="welcome"></p>
+    <script>
+        const userdata = [{
+                          users : "muki",
+                          passw:"muki123"
+        }]
+        const status =[{
+            msg:"hi im friends ",
+            name:"Ram"
+        },
+        {
+            msg:"hi im second friends ",
+            nam:"hanuman"
+        }];
+        
+        let username = prompt(" Enter user name");
+        let password = prompt("Plz enter password");
+        //console.log(user[0].users);
+        const login = (user,pass) =>{
+            if(user === userdata[0].users && pass === userdata[0].passw){
+                for(var val of status){
+                    var page = document.getElementById("welcome");
+                    page.innerHTML=` welcome ${user}  `
+            console.log(val[0]);
+
+                }
+        }else{
+            alert("sorry wrong user name");
+        }
+        }
+       login(username,password);
+    </script>
+</body>
+</html>
