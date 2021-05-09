@@ -1,0 +1,29 @@
+<script>
+//      JavaScript Date Object lets us work with dates:
+
+// var d = new Date();
+
+// Date objects are based on a time value that is the number of milliseconds since 1 January 1970 UTC.
+
+// By default, JavaScript will use the browser's time zone and display a date as a full text string:
+
+// 3 numbers specify year, month, and day:
+// 2 numbers specify year and month:
+// You cannot omit month. If you supply only one parameter it will be treated as milliseconds.
+
+// getFullYear() Get the year as a four digit number (yyyy)
+// getMonth() Get the month as a number (0-11)
+// getDate() Get the day as a number (1-31)
+
+// Universal Coordinated Time (UTC) is the time set by the World Time Standard.
+ var d = new Date();
+ console.log(d);
+ var day = d.getDate();
+ //var month = d.getDay();
+ var month = d.getMonth();
+ var year = d.getFullYear();
+ console.log(`${day}/${month}/${year} `);
+
+ let setDate = d.setDate(2,2,2020);
+ console.log(setDate);
+</script>
