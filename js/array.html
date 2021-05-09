@@ -1,0 +1,32 @@
+<script>
+    // How to create an array in javascript in Hindi? Arrays are Objects. 
+    // Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays. 
+    // But, JavaScript arrays are best described as arrays.
+
+    var array = ["ram","Sita","laxman"];
+    console.log(array);
+    var arr2 = new Array("mukesh","Rakhi");
+    console.log(arr2);
+
+
+//     JavaScript Array Methods in Hindi.
+// length Sets or returns the number of elements in an array
+// concat() Joins two or more arrays, and returns a copy of the joined arrays.
+// indexOf() Search the array for an element and returns its position
+// isArray() Checks whether an object is an array
+// pop() Removes the last element of an array, and returns that element
+// push() Adds new elements to the end of an array, and returns the new length
+ console.log(array.length);
+ console.log(array.concat(arr2));
+ console.log(array.indexOf("ram"));
+ console.log(Array.isArray(array));
+ array.push("Hanuman");
+ console.log(array);
+ //arr2.pop();
+ console.log(arr2);
+ //
+ array.unshift("Hanuman");
+ console.log(array);
+ arr2.shift();
+ console.log(arr2);
+</script>
