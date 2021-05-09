@@ -1,0 +1,17 @@
+<p id="dt"></p>
+<script>
+//     we will see setInterval JavaScript in Hindi. Digital Clock in javascript or dynamic clock/time in javascript.
+//      The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+//       The setInterval() method will continue calling the function until clearInterval() is called, or
+//        the window is closed.
+//         The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+// The clearInterval() method stops the executions of the function specified in the setInterval() method.
+
+const time = ()=>{
+            let d = new Date();
+         let local = d.toLocaleTimeString();
+        document.getElementById("dt").innerHTML= local;
+         }
+         const local = setInterval(time, 1000);
+         
+</script>
