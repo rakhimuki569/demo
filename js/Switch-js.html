@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>switch case in javascript</h1>
+    <p>what is switch case in javascript 
+        - the statement is used to select one of many blocks of code to be executed</p>
+        <pre>
+            syntax : 
+switch(expression){
+ case constant: code;
+     break;
+ case constant : code;
+     break;
+
+ default: code;
+} 
+
+        </pre>
+        <label>Enter Roll no</label>
+        <input type="number" id="roll" onblur="showName()"><br>
+        <label>  check Name</label>
+        <p id="show"></p>
+        <script>
+
+       const showName = ()=>{
+        let num = document.getElementById("roll").value;
+        let show = document.getElementById("show");
+        switch(num){
+        case "1" :
+          show.innerHTML = " Mukesh";
+          break;
+          case "2" :
+          show.innerHTML = " Rakhi";
+          break;
+          case "3" :
+          show.innerHTML = " Himanshi";
+          break;
+          case "4" :
+          show.innerHTML = " Prachi";
+          break;
+          default :
+          show.innerHTML = " no ";
+        
+        
+    }}
+    </script>
+</body>
+</html>
