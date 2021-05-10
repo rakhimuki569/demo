@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>jQuery Events</h1>
+    <p id="toggle">All the different visitor's actions that a web page can respond to are called events.
+        An event represents the precise moment when something happens.
+        
+        Examples:
+        . moving a mouse over an element. 
+        selecting a radio button. clicking on an element
+        The term "fires/fired" is often used with events.
+        
+         Example: "The keypress event is fired, the moment you press a key".</p>
+         <p id="click"><b>JQuery Click event vs jQuery dblclick event.</b><br> jquery - Click and double-click event firing.  The dblclick() method triggers the dblclick event or attaches a function to run when a dblclick event occurs. Tip: The dblclick event also generates a click event. 
+            jQuery click() and dblclick() events are the most common used mouse events :
+            
+            click() – Fire when mouse single click on the matched element.
+            dblclick() – Fire when mouse double clicks on the matched element.
+            Attach a click and double-click event to an element.  jquery trigger double click on a single click.</p>
+            <p id="hide">jQuery Show and Hide Effects
+
+                jQuery hide() Method
+                jQuery show() Method</p>
+                <p id="key"><b>jQuery supports 3 types of keyboard events and which we are :</b>
+
+                    keyup(): Event fired when a key is released on the keyboard.
+                    keydown(): Event fired when a key is pressed on the keyboard.
+                    keypress:() Event fired when a key is pressed on the keyboard.
+                    From above definitions, it looks like that keydown() and keypress() are same thing. 
+                    
+                    The order of events related to the keypress event:
+                    
+                    keydown - The key is on its way down
+                    keypress - The key is pressed down
+                    keyup - The key is released
+                    The keypress() method triggers the keypress event, or attaches a function to run when a keypress event occurs.</b>x
+
+                    </p>
+                    <p id="mouse"><b>1: mouseenter() </b><br>
+                        The function is executed when the mouse pointer enters the HTML element<br>
+                        
+                        <b></b>2: mouseleave()</b><br>
+                        The function is executed when the mouse pointer leaves the HTML element<br>
+                        
+                        <b> 3: mousedown()</b><br>
+                        The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over the HTML element
+                        
+                        <b></b>4: mouseup()</b><br>
+                        The function is executed, when the left, middle or right mouse button is released, while the mouse is over the HTML element:
+                        
+                        jQuery is tailor-made to respond to events in an HTML page.<br>
+                        
+                        <b> What are Events?</b><br>
+                        All the different visitor's actions that a web page can respond to are called events.
+                        
+                        An event represents the precise moment when something happens.<br>
+                        
+                        Examples:
+                        
+                        moving a mouse over an element
+                        selecting a radio button
+                        clicking on an element
+                        The term "fires/fired" is often used with events. Example: "The keypress event is fired, 
+                        the moment you press a key".</p>
+                        <p id="blur">  
+                            <b>What is difference between jQuery's .focusout() and .blur() events?</b><br>
+The difference between .focusout() and blur() jQuery event is that the .focusout() is sent to an element when it, or any element inside of it, loses focus. The .blur() event supports detecting the loss of focus from parent elements (i.e., it supports event bubbling)
+
+
+The focus and blur events keep track of the elements the user focuses on.
+
+focus
+Fires when a focusable element gains the focus
+
+blur
+Fires when a focusable element loses the focus
+
+focusin and focusout
+Fire at the same time as focus and blur, but a bubble.
+</p>
+<button class="toogle">Toggle</button>
+<button class="click">click</button>
+<button class="hide">Hide</button>
+<button class="hide">Hide</button>
+<script>
+    $( function(){
+      $(".toogle").click(()=>{
+          $('#toggle').toggle("slow")
+      });
+      $(".click").click(()=>{
+          $('#click').css("color","red");
+      });
+      $(".hide").click(()=>{
+          $('#hide').hide("slow");
+      });
+      $(document).keypress(()=>{
+          $('#key').hide("slow");
+      });
+      $("#mouse").mouseenter(()=>{
+          $('#mouse').hide("slow");
+      });
+      $("#mouse").mouseout(()=>{
+          $('#mouse').show("slow");
+      });
+
+
+    });
+</script>
+</body>
+</html>
