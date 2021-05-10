@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        p{display: none;}
+    </style>
+</head>
+<body>
+    <button id="btn">Show</button>
+    <h1>What is jQuery</h1>
+    <div>
+        <p>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
+        <p>A library containing a set of functions (reusable functions) created using JavaScript.</p>
+        <p>jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. 
+            It is free, open-source software using the permissive MIT License.</p>
+            
+       
+    </div>
+    <h1>Why jQuery</h1>
+    <div>
+        <p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish and 
+            wraps them into methods that you can call with a single line of code.</p>
+        <p>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation. 
+            Also, from CSS to ex. CSS manipulation, 
+            Effects, and animations</p>
+        <p>JQuery functions are completely browser independent.</p>
+        <P>jQuery is not a language, but it is a well written JavaScript code. As quoted on official jQuery website,
+             "it is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, 
+            and Ajax interactions for rapid web development"</P>
+            
+        
+    </div>
+    <div>
+        <h1>What is jQuery?</h1>
+        <p>jQuery is a lightweight, "write less, do more", JavaScript library.
+            The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+        <p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, 
+            and wraps them into methods that you can call with a single line of code.
+            jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM 
+            manipulation.</p>
+        <p>The jQuery library contains the following features:</p>
+        <ul>
+            <li>HTML/DOM manipulation</li>
+            <li>CSS manipulation</li>
+            <li>HTML event methods</li>
+            <li>Effects and animations</li>
+            <li>AJAX</li>
+            <li>Utilities</li>
+        </ul>
+        <p>Tip: In addition, jQuery has plugins for almost any task out there.</p>
+        <p>Adding jQuery to Your Web Pages
+            There are several ways to start using jQuery on your web site. You can:</p>
+        <p>Download the jQuery library from jQuery.com<br>
+            Include jQuery from a CDN, like Google<br>
+            Downloading jQuery<br>
+            There are two versions of jQuery available for downloading:</p>
+    </div>
+
+<div>
+    <p>Production version - this is for your live website because it has been minified and compressed</p>
+    <p>Development version - this is for testing and development (uncompressed and readable code)</p>
+    <p>Both versions can be downloaded from jQuery.com.</p>
+    <p>jQuery CDN</p>
+    <p>If you don't want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network).
+
+        Both Google and Microsoft host jQuery.
+        
+        One big advantage of using the hosted jQuery from Google or Microsoft:
+        
+        Many users already have downloaded jQuery from Google or Microsoft when visiting another site.
+         As a result, it will be loaded from cache when they visit your site, which leads to faster loading time.
+         Also, most CDN's will make sure that once a user requests a file from it, 
+         it will be served from the server closest to them, which also leads to faster loading time.</p>
+
+</div>
+
+
+<script>
+    $(function(){
+        $("#btn").click(()=>{
+            $("p").css("display","block");
+        })
+      
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
