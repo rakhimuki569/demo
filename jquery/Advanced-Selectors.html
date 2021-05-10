@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQuery Advanced Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+   <h1> jQuery Advanced Selectors</h1> 
+   <div>
+       <p id="one">jQuery selectors allow you to select and manipulate HTML element(s).</p>
+       <p>jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, 
+           values of attributes and much more. </p>
+       <p id="one"> It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.</p>
+      
+   </div>
+   <button id="cssmethode"> Click Here </button>
+    <script>
+        // $(function(){
+        //     $("#cssmethode").click(()=>{
+        //         $(this).css("color","#000");
+        //     //   $("*").css("background-color","blue");
+              
+               
+        //     })
+        // });4
+        $(document).ready(function(){
+            $("#cssmethode").click(function(){
+                // console.log(this);
+                // $(this).css("background-color","red");
+               // $("[id]").hide();
+               $("p:even").css("color","red");
+            })
+        })
+    </script>
+</body>
+</html>
