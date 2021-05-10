@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fading Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Fading Effects</h1>
+    <div>
+        <p id="fadein">Fading Effects</p>
+        <p class="fadein" style="display: none;">The jQuery fadeIn() method is used to fade in a hidden element.
+            Syntax:
+            <pre>
+            $(selector).fadeIn(speed,callback);
+        </pre>
+            The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+            
+            The optional callback parameter is a function to be executed after the fading completes.
+            </p>
+        <p id="fadeout">jQuery fadeOut() Method</p>
+        <p class="fadeout">The jQuery fadeOut() method is used to fade out a visible element.
+
+            Syntax:
+            <pre>
+            $(selector).fadeOut(speed,callback);
+        </pre>
+            The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+            
+            The optional callback parameter is a function to be executed after the fading completes.</p>
+    </div>
+    <h1 id="fade"> jQuery fadeToggle method </h1>
+    <pre class="fade"> 
+        If the elements are faded out, fadeToggle() will fade them in.
+
+If the elements are faded in, fadeToggle() will fade them out.
+
+Note: Hidden elements will not be displayed at all (no longer affects the layout of the page).
+
+Syntax
+$(selector).fadeToggle(speed,easing,callback)
+
+    </pre>
+    <script>
+
+        $( function(){
+          $("#fadein").click(()=>{
+              $('.fadein').fadeIn("fast");
+          });
+          $("#fadeout").click(()=>{
+              $('.fadeout').fadeOut("slow");
+          });
+         
+          $("#fade").click(()=>{
+              $('.fade').fadeToggle("slow");
+          });
+    
+    
+        });
+    
+            </script> 
+</body>
+</html>
