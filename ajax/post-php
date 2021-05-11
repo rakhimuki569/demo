@@ -1,0 +1,8 @@
+<?php
+
+$name = $_post[name];
+echo " my name is" .$name ".";
+
+
+
+?>

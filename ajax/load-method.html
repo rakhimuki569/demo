@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -24,9 +28,18 @@ The optional data parameter specifies a set of query string key/value pairs to s
 The optional callback parameter is the name of a function to be executed after the load() method is completed.  
  ajax using jquery.
         </pre>
+        <div id="loadData">
+
+        </div>
+        <button id="btnClick"> click on it</button>
     </div>
     <script>
-        
+        $(document).ready( function(){
+            $("#btnClick").click(function(){
+                $('#loadData').load('load.html');
+
+            });
+        });
     </script>
         
 </body>
