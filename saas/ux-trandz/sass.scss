@@ -1,0 +1,120 @@
+//partial import
+@import 'variable';
+@import 'typo';
+@mixin block($color1,$fl) {
+    width:map-get($color,box-width);
+    height: map-get($color,box-height);
+    padding: map-get($color,padding); 
+    float: left;
+    h1{
+        color: $color1;
+        text-align: $fl;
+    }
+}
+.card{
+
+    @include block( rgb(151, 82, 93),right);
+     
+        background: map-get($color,second-color);
+        
+         
+         p{ 
+            color: map-get($color,white);
+            text-align: center;  
+        }
+         
+}
+.card2{
+    @include block(#f00,left);
+   
+  
+      background: map-get($color,primary-color);
+     
+      
+          
+       
+       p{ 
+          color: map-get($color,white);
+          text-align: center;  
+      }
+       
+}
+%card3{
+   
+    
+    width:200px;
+    height: 200px;
+    float: left;
+    padding: 20px;
+    border:1px solid #000;
+    margin: 30px;
+    a{
+        background-color: #f0f032;
+        color: #f00;
+        padding: 10px 20px;
+    }
+    
+}
+.card4{
+    @extend %card3;
+    background: #f00;
+    a{
+
+        &:hover{
+            background: darken(#f0f032,15%);
+        }
+    }
+}
+.card5{
+    @extend .card4;
+    background-color: #f0f032;
+    a{
+
+        &:hover{
+            background: lighten(#f0f032,15%);
+        }
+}
+}
+.card6{
+    @extend .card4;
+    background:mix(#f0f032,#f00);
+    a{
+
+        &:hover{
+            background: lighten(#f0f032,15%);
+        }
+}
+}
+@function sum($val1,$val2){
+    @return $val1+$val2;
+}
+.function{
+    @extend .card6;
+    width: sum(100, 200)+ px;
+}
+$val1:3;
+$val2:5;
+.my-class{
+    margin:$val1+$val2*1px;
+}
+$side:right;
+.my-class-#{$side}{
+    float: $side;
+
+}
+/// for loop
+@for $i from 1 through 3{
+    .box-#{$i*100}{
+        width:$i*100+px;
+        background: darken( #dd0a0a, $i*10%);
+    }
+}
+// for each loop
+$device : (desktop:50,tab:20,mobile:10);
+@each $var,$fr in $device {
+    .#{$var}{
+        width: $fr+200px;
+    }
+    
+}
+

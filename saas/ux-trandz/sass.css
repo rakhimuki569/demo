@@ -1,0 +1,128 @@
+h3 {
+  color: lightcoral;
+  font-size: 44px;
+  float: left;
+  width: 100%;
+}
+
+h4 {
+  color: lightseagreen;
+  font-size: 44px;
+  float: left;
+  width: 100%;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  float: left;
+  background: #094d09;
+}
+
+.card h1 {
+  color: #97525d;
+  text-align: right;
+}
+
+.card p {
+  color: #fff;
+  text-align: center;
+}
+
+.card2 {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  float: left;
+  background: #93939e;
+}
+
+.card2 h1 {
+  color: #f00;
+  text-align: left;
+}
+
+.card2 p {
+  color: #fff;
+  text-align: center;
+}
+
+.card4, .card5, .card6, .function {
+  width: 200px;
+  height: 200px;
+  float: left;
+  padding: 20px;
+  border: 1px solid #000;
+  margin: 30px;
+}
+
+.card4 a, .card5 a, .card6 a, .function a {
+  background-color: #f0f032;
+  color: #f00;
+  padding: 10px 20px;
+}
+
+.card4, .card5, .card6, .function {
+  background: #f00;
+}
+
+.card4 a:hover, .card5 a:hover, .card6 a:hover, .function a:hover {
+  background: #c7c70f;
+}
+
+.card5 {
+  background-color: #f0f032;
+}
+
+.card5 a:hover {
+  background: #f5f579;
+}
+
+.card6, .function {
+  background: #f87819;
+}
+
+.card6 a:hover, .function a:hover {
+  background: #f5f579;
+}
+
+.function {
+  width: 300px;
+}
+
+.my-class {
+  margin: 8px;
+}
+
+.my-class-right {
+  float: right;
+}
+
+.box-100 {
+  width: 100px;
+  background: #ac0808;
+}
+
+.box-200 {
+  width: 200px;
+  background: #7b0606;
+}
+
+.box-300 {
+  width: 300px;
+  background: #4b0303;
+}
+
+.desktop {
+  width: 250px;
+}
+
+.tab {
+  width: 220px;
+}
+
+.mobile {
+  width: 210px;
+}
+/*# sourceMappingURL=sass.css.map */
