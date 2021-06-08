@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+		*{ margin:0; padding:0; box-sizing: border-box; }
+		html{font-size:62.5%;}
+		body{ width:100vw; height: 100vh; background: #00796b; display: flex; justify-content: center;
+		align-items: center; }
+		.center-div{ display: flex; justify-content: center; align-items: center;position: relative;
+		 }
+		.outer-ring{width:20rem; height: 20rem; border-radius: 50%;
+			border-top:.8rem solid gray;border-bottom:.8rem solid gray;border-right:.8rem solid transparent;
+		border-left:.8rem solid transparent; position: absolute;
+	animation: ring .6s linear infinite;}
+		.middle-ring{width:15rem; height: 15rem; border-radius: 50%;
+			border-top:.8rem solid gray;border-bottom:.8rem solid gray;border-right:.8rem solid transparent;
+		border-left:.8rem solid transparent;position: absolute;
+	animation: ring .6s linear infinite reverse;}
+		.innear-ring{width:10rem; height: 10rem; border-radius: 50%;
+			border-top:.8rem solid gray;border-bottom:.8rem solid gray;border-right:.8rem solid transparent;
+		border-left:.8rem solid transparent;position: absolute;
+		animation: ring .6s linear infinite;}
+		.dot{width:6rem; height: 6rem; border-radius: 50%; background: #fff;
+			position: absolute;animation: ring .6s linear infinite;}
+
+
+			@keyframes ring{
+				0%{ transform: rotate(0deg) scale(0.5); }
+				100%{ transform: rotate(360deg) scale(1.2); }
+
+			}
+	</style>
+</head>
+<body>
+	<div class="center-div">
+	<div class="outer-ring">
+	</div>
+	<div class="middle-ring">
+	</div>
+	<div class="innear-ring">
+	</div>
+	<div class="dot">
+	</div>
+	</div>
+</body>
+</html>
