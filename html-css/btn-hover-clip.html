@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Btn Hover </title>
+	<style>
+		*{ margin:0; padding:0; box-sizing: border-box; }
+		html{ font-size: 62.5%; }
+		.center{ width:100vw;  height:100vh; display: flex; justify-content: center; align-items: center;}
+		.center a{ width:20rem; height:10rem;text-decoration: none;     }
+		span {  padding:1rem 4rem; font-size: 3rem; text-transform: uppercase;
+    position: absolute;
+   
+    transition: all .3s;
+}
+
+span:first-child{ background:#2db6e1 ; color: #fff;}
+span:last-child{ background:#fff ; color: #2db6e1 ;clip-path: polygon(79% 0, 100% 0, 100% 100%, 45% 100%);}
+span:last-child:hover{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+span:first-child:hover ~ span {clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);}
+
+	</style>
+</head>
+<body>
+	<div class="center">
+		<a href="#">
+			<span>Click Me</span>
+			<span>Click Me</span>
+		</a>
+	</div>
+</body>
+</html>
